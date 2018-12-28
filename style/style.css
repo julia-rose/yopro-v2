@@ -1,3 +1,56 @@
-h1 {
-  color: red;
+/*--------------------------------------*/
+/* UNIVERSAL PAGE STYLES */
+/*--------------------------------------*/
+
+/* get rid of bento default transitions */
+* {
+  transition: none !important;
+}
+/* get rid of default browser spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+/* get rid of default button styles */
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+/* get rid of all built-in bento margins/padding */
+/* prevent script embed from taking up physical space on the page */
+.container,
+.column-12,
+.component {
+  min-height: unset !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+/* prevent labels for embeds from taking up space on the page */
+#layout-0 .text-container {
+    display: none;
+}   
+/* create shadow effect on left and right of page when full size */
+@media (min-width: 1280px) {
+  .span12.column-12 {
+    position: relative;
+  }
+  .span12.column-12:before {
+    box-shadow: inset -10px 0 10px -10px;
+    content: " ";
+    height: 100%;
+    left: -10px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+  }
+  .span12.column-12:after {
+    box-shadow: 10px 0 10px -10px inset;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+  }
 }

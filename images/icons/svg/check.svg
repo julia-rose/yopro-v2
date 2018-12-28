@@ -1,0 +1,6 @@
+<svg viewBox="0 0 181 128" xmlns="http://www.w3.org/2000/svg" class="pbs-check" aria-labelledby="pbs-check__title">
+    <title id="pbs-check__title">
+        checkmark
+    </title>
+    <path d="M67.819 96.894L16.74 45.816a2.007 2.007 0 0 0-2.838.001L.589 59.131a2.004 2.004 0 0 0-.001 2.837L66.4 127.781a2.006 2.006 0 0 0 2.837-.001l12.714-12.714 98.324-98.324a2.007 2.007 0 0 0 0-2.838L166.962.589a2.006 2.006 0 0 0-2.84 0L67.82 96.894z" fill-rule="evenodd"/>
+</svg>
