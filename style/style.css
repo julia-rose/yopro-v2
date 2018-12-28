@@ -14,6 +14,7 @@ body {
 /* get rid of default button styles */
 button {
   padding: 0;
+  background: transparent;
   border: none;
   cursor: pointer;
 }
