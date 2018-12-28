@@ -1,0 +1,119 @@
+.yp-footer {
+  width: 100%;
+  padding: 34px 10px 20px 15px;
+  color: #fff;
+  background: #222222;
+  overflow: hidden;
+}
+.yp-footer__logo {
+  margin-bottom: 35px;
+}
+.yp-footer__logo img {
+  width: 120px;
+  height: 44px;
+}
+.yp-footer__site-map {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 600px;
+}
+.yp-footer__section {
+  margin-bottom: 46px;
+}
+#footer--contact {
+  order: 1;
+}
+#footer--resources {
+  order: 2;
+  margin-bottom: 150px;
+}
+#footer--get-involved {
+  order: 3;
+}
+#footer--events,
+#footer--about {
+  order: 4;
+}
+.yp-footer__headline {
+  margin: 0 0 13px 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+a.yp-footer__link {
+  display: block;
+  margin: 0 0 5px 0;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.yp-footer__link:hover,
+a.yp-footer__link:active{
+  color: #00b2c8;
+  text-decoration: none;
+}
+.yp-footer__copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@media(min-width: 600px) {
+  .yp-footer {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .yp-footer {
+    padding-left: 40px;
+  }
+  .yp-footer__site-map {
+    max-height: 400px;
+  }
+  #footer--resources {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 900px) {
+  .yp-footer__links {
+    display: flex;
+  }
+  .yp-footer__site-map {
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .yp-footer {
+    padding: 45px 10px 20px 30px;
+  }
+  .yp-footer__site-map {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 0;
+  }
+  .yp-footer__section {
+    margin-right: 30px;
+  }
+  #footer--get-involved {
+    order: 2;
+  }
+  #footer--resources {
+    order: 3;
+  }
+}
+
+@media (min-width: 1100px) {
+  .yp-footer__section {
+    margin-right: 45px;
+  }
+}

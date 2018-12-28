@@ -1,7 +1,3 @@
-/*--------------------------------------*/
-/* UNIVERSAL PAGE STYLES */
-/*--------------------------------------*/
-
 /* get rid of bento default transitions */
 *:not(input) {
   transition: none !important;
