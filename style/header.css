@@ -4,16 +4,17 @@
   align-items: center;
   padding: 9px 15px;
 }
-svg[class^="yp-header__icon--"],
-svg[class^="yp-header__icon--"]:visited {
+svg[class^="yp-header__icon--"] {
   width: 19px;
   height: 19px;
   fill: #222;
+  background-color: white;
 }
 svg[class^="yp-header__icon--"]:hover,
 svg[class^="yp-header__icon--"]:active,
 svg[class^="yp-header__icon--"]:focus {
   fill: #00b2c8;
+  background-color: white;
 }
 .yp-header__icon--close {
   display: none;
@@ -30,76 +31,11 @@ svg[class^="yp-header__icon--"]:focus {
   display: none;
   list-style-type: none;
 }
-.menu-open.yp-header,
-.search-open.yp-header {
-  background-color: #222;
-}
-.menu-open .yp-header__nav {
-  position: absolute;
-  display: block;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  padding: 0;
-  margin: 0 auto;
-  color: #fff;
-  background-color: #222;
-  text-align: center;
-}
-.menu-open .yp-header__logo--black,
-.search-open .yp-header__logo--black {
-  display: none;
-}
-.menu-open .yp-header__logo--white,
-.search-open .yp-header__logo--white {
-  display: block;
-  width: 93px;
-  height: 34px;
-}
-.menu-open svg[class^="yp-header__icon--"],
-.search-open svg[class^="yp-header__icon--"] {
-  fill: #fff;
-  background-color: #222;
-}
-.menu-open svg.yp-header__icon--menu {
-  fill: #007f8f;
-}
-.search-open svg.yp-header__icon--search {
-  fill: #007f8f;
-}
-.menu-open svg[class^="yp-header__icon--"]:hover,
-.menu-open svg[class^="yp-header__icon--"]:active,
-.menu-open svg[class^="yp-header__icon--"]:focus,
-.search-open svg[class^="yp-header__icon--"]:hover,
-.search-open svg[class^="yp-header__icon--"]:active,
-.search-open svg[class^="yp-header__icon--"]:focus {
-  fill: #00b2c8;
-}
-.menu-open .yp-header__nav__item {
-  margin-bottom: 20px;
-}
-.menu-open .yp-header__nav__item a {
-  color: #fff;
-  text-decoration: none;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 24px;
-}
-.menu-open .yp-header__nav__item a:hover, 
-.menu-open .yp-header__nav__item a:active,
-.menu-open .yp-header__nav__item a:focus {
-  color:  #00b2c8;
-}
+/* many of the search dropdown items are applicable for
+ both the mobile experience and the desktop experience */
 .station-header-search .dropdown-menu {
   display: none;
   position: absolute;
-  width: 100%;
-  height: 300px;
-  top: 50px;
-  left: 0;
-  margin: 0 auto;
-  padding: 0;
-  background-color: #222;
   list-style-type: none;
 }
 .search-open .station-header-search .dropdown-menu {
@@ -114,17 +50,22 @@ svg[class^="yp-header__icon--"]:focus {
 }
 .search-open .station-header-search-form input {
   width: 100%;
-  padding-right: 50px;
+  padding: 4px 50px 4px 6px;
   height: 45px;
+  color: #222;
   box-sizing: border-box;
   border-radius: 0;
-  border-color: #b3b3b3;
+  border: 1px solid #b3b3b3;
   margin-bottom: 0;
   font-size: 14px;
   box-shadow: none;
   outline: none;
   font-family: "Open Sans", sans-serif;
-  background-color: #222;
+}
+.search-open .station-header-search-form input:focus {
+  border-color: rgba(0,178,200,0.8);
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(82,168,236,0.6);
 }
 .search-open .station-header-search-form button {
   position: absolute;
@@ -148,27 +89,126 @@ svg[class^="yp-header__icon--"]:focus {
   border-radius: 0;
 }
 
+.search-open .station-header-search-form button:hover svg.yp-header__icon--search-interior,
+.search-open .station-header-search-form button:active svg.yp-header__icon--search-interior {
+  fill: #fff;
+  background-color: #00b3c9;
+}
+
+/* styles that should ONLY work up to 767px */
+/* e.g. the "dark menu" styles */
+@media (max-width: 767px) {
+  .menu-open.yp-header,
+  .search-open.yp-header {
+    background-color: #222;
+  }
+  .menu-open .yp-header__menu-button .yp-header__icon--close,
+  .search-open .yp-header__search .yp-header__icon--close {
+    display: block;
+    fill: #009fb3;
+  }
+  .menu-open .yp-header__menu-button .yp-header__icon--menu {
+    display: none;
+  }
+  .search-open .yp-header__search .yp-header__icon--search {
+    display: none;
+  }
+  .menu-open .yp-header__nav {
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #222;
+    text-align: center;
+  }
+  .menu-open .yp-header__logo--black,
+  .search-open .yp-header__logo--black {
+    display: none;
+  }
+  .menu-open .yp-header__logo--white,
+  .search-open .yp-header__logo--white {
+    display: block;
+    width: 93px;
+    height: 34px;
+  }
+  .menu-open svg[class^="yp-header__icon--"],
+  .search-open svg[class^="yp-header__icon--"] {
+    fill: #fff;
+    background-color: #222;
+  }
+  .search-open svg.yp-header__icon--search-interior {
+    fill: #fff;
+  }
+  .menu-open svg[class^="yp-header__icon--"]:hover,
+  .menu-open svg[class^="yp-header__icon--"]:active,
+  .menu-open svg[class^="yp-header__icon--"]:focus,
+  .search-open svg[class^="yp-header__icon--"]:hover,
+  .search-open svg[class^="yp-header__icon--"]:active,
+  .search-open svg[class^="yp-header__icon--"]:focus {
+    fill: #00b2c8;
+  }
+  .menu-open .yp-header__nav__item {
+    margin-bottom: 20px;
+  }
+  .menu-open .yp-header__nav__item a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 24px;
+  }
+  .menu-open .yp-header__nav__item a:hover, 
+  .menu-open .yp-header__nav__item a:active,
+  .menu-open .yp-header__nav__item a:focus {
+    color:  #00b2c8;
+  }
+  .station-header-search .dropdown-menu {
+    width: 100%;
+    height: 300px;
+    top: 50px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #222;
+  }
+  .search-open .station-header-search-form input {
+    color: #fff;
+    background-color: #222;
+  }
+  .search-open .station-header-search-form input::placeholder {
+    color: #ccc;
+  }
+}
 
 @media (min-width: 768px) {
   .yp-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 20px 15px;
+    padding: 15px 24px;
+    border-bottom: 1px solid #ddd;
+  }
+  .yp-header__menu-button {
+    display: none;
+  }
+  .yp-header__logo {
+    flex-grow: 1;
   }
   .yp-header__logo--black {
     width: 120px;
     height: 44px;
-  }
+  } 
   .yp-header__nav {
     display: flex;
-    list-style-type: none;
-  }
-  .yp-header__desktop-nav {
-    display: flex;
+    margin: 0 0 8px 0;
+    padding: 0;
   }
   .yp-header__nav__item a {
-    margin-left: 45px;
+    margin-left: 20px;
     font-size: 22px;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 500;
@@ -178,17 +218,18 @@ svg[class^="yp-header__icon--"]:focus {
   .selected.yp-header__nav__item a {
     padding-bottom: 23px;
     color: #007f8f;
-    border-bottom: 5px solid #009fb3;
+    border-bottom: 5px solid #007f8f;
+  }
+  .selected.yp-header__nav__item a:hover {
+    color: #009fb3;
+    border-color: #009fb3;
   }
   .yp-header__nav__item a:hover {
     color: #009fb3;
   }
-  .yp-header__mobile-nav {
-    display: none;
-  }
   .yp-header__search {
-    margin: 0 0 0 40px;
-  }
+    margin: 0 0 6px 20px;
+  } 
   .station-header-search {
     display: block;
   }
@@ -204,21 +245,20 @@ svg[class^="yp-header__icon--"]:focus {
     color: #00b2c8;
   }
   .station-header-search .dropdown-menu {
-    display: block;
-    top: 100%;
+    display: none;
     left: auto;
-    right: -20px;
+    right: 0;
     height: auto;
-    margin-top: 23px;
+    margin-top: 24px;
     padding: 12px;
     background-color: #fff;
     box-shadow: none;
-    border-color: #e0e0e0;
+    border: 1px solid #ddd;
     border-top: 0;
     border-right: 0;
     border-radius: 0;
-  }
-  /* .station-header-search-form {
+  } 
+  .station-header-search-form {
     margin-bottom: 0;
   }
   .station-header-search-form input {
@@ -226,5 +266,19 @@ svg[class^="yp-header__icon--"]:focus {
   }
   .station-header-search-form button {
     color: #222;
-  } */
+  }
+}
+
+/* manage spacing between nav items */
+@media (min-width: 900px) {
+  .yp-header__nav__item a,
+  .yp-header__search {
+    margin-left: 30px;
+  }
+}
+@media (min-width: 950px) {
+  .yp-header__nav__item a,
+  .yp-header__search {
+    margin-left: 45px;
+  }
 }

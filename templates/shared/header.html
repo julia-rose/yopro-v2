@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../style/style.css">
 <link rel="stylesheet" type="text/css" href="../../style/header.css">
-<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500|Open+Sans:400" rel="stylesheet">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <div class="yp-header">
@@ -36,17 +36,30 @@
   <div class="yp-header__search-dropdown station-header-search dropdown">
     <button class="yp-header__search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       <svg viewBox="0 0 174 175" xmlns="http://www.w3.org/2000/svg" class="yp-header__icon--search">
-        <title  id="yp-header__icon--search">Search</title>
+        <title>Search</title>
         <path d="M98,97.9c-17.8,17.8-46.8,17.8-64.6,0s-17.8-46.8,0-64.6s46.8-17.8,64.6,0S115.8,80.1,98,97.9 M112.1,19.2
           C85.3-7.5,41.2-6.4,16,22.7c-20.8,24-21.3,60.1-1.1,84.6c22.7,27.7,62.6,31.1,89.6,11.4l55.3,55.3c0.8,0.8,2,0.8,2.8,0l11.3-11.3
           c0.8-0.8,0.8-2,0-2.8l-55.3-55.3C137.7,78.6,135.3,42.4,112.1,19.2"/>
+      </svg>
+      <svg viewBox="0 0 126 126" xmlns="http://www.w3.org/2000/svg" class="yp-header__icon--close" aria-labelledby="yp-header__icon--close">
+        <title id="yp-header__icon--close">
+          Close
+        </title>
+        <path d="M76.601 63.166l49.14-49.141a1.997 1.997 0 0 0 .005-2.83L115.136.585a2 2 0 0 0-2.83.005l-49.14 49.141L14.025.59a1.997 1.997 0 0 0-2.83-.005L.585 11.195a1.998 1.998 0 0 0 .005 2.83l49.141 49.141L.59 112.307a1.997 1.997 0 0 0-.005 2.83l10.61 10.61a2 2 0 0 0 2.83-.005l49.141-49.141 49.14 49.141c.788.787 2.05.785 2.83.005l10.61-10.61a1.998 1.998 0 0 0-.005-2.83l-49.14-49.141z" />
       </svg>
     </button>
     <ul class="dropdown-menu pull-right" aria-labelledby="menu-search-dropdown">
       <li>
         <form class="station-header-search-form" action="http://www.pbs.org/yopro/search/" method="get">
           <div class="inner-addon">
-            <button type="submit" class="fa fa-search"></button>
+            <button type="submit">
+              <svg viewBox="0 0 174 175" xmlns="http://www.w3.org/2000/svg" class="yp-header__icon--search-interior">
+                <title>Search</title>
+                <path d="M98,97.9c-17.8,17.8-46.8,17.8-64.6,0s-17.8-46.8,0-64.6s46.8-17.8,64.6,0S115.8,80.1,98,97.9 M112.1,19.2
+                  C85.3-7.5,41.2-6.4,16,22.7c-20.8,24-21.3,60.1-1.1,84.6c22.7,27.7,62.6,31.1,89.6,11.4l55.3,55.3c0.8,0.8,2,0.8,2.8,0l11.3-11.3
+                  c0.8-0.8,0.8-2,0-2.8l-55.3-55.3C137.7,78.6,135.3,42.4,112.1,19.2"/>
+              </svg>
+            </button>
             <input name="q" type="text" class="form-control" placeholder="Search"/>
           </div>
         </form>
