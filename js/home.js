@@ -1,0 +1,1 @@
+// add 'image-at-mobile' class to 'yp-newsletter-module' for home page
